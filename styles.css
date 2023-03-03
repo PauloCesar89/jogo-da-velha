@@ -6,7 +6,7 @@
 body{
     font-family: "Overpass","san-serif";
     font-size: 20px;
-    background: linear-gradient( 50deg,rgb(0, 0, 0), rgb(231, 24, 66) );
+    background: rgb(52, 235, 219);
 }
 
 .container{
@@ -40,8 +40,8 @@ h1{
     text-align: center;
     padding-top: 0.62rem;
     border-radius: 0.1rem;
-    border-left: 8px solid rgb(231, 24, 66);
-    border-bottom: 8px solid rgb(231, 24, 66);
+    border-left: 8px solid #f2f2f2;
+    border-bottom: 8px solid #f2f2f2;
 }
 
 #cel0{
