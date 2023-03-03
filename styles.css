@@ -6,35 +6,61 @@
 body{
     font-family: "Overpass","san-serif";
     font-size: 20px;
-    background-color: #313534;
+    background: linear-gradient( 50deg,rgb(0, 0, 0), rgb(231, 24, 66) );
 }
 
-
 .container{
-    max-width: 15.6rem;
-    padding: 1.5rem;
-    border: none;
-    border-radius: 0.25rem;
-    background-color: #727a78;
+    max-width: 16.6rem;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    opacity: 80%;
     margin: 5rem auto;
 }
 
 h1{
     text-align: center;
+    color: #f4f4f4;
+    margin-bottom: 2rem;
 }
 
 .grid{
     display: flex;
-    justify-content: space-evenly;
+ /* justify-content: space-evenly;*/
     flex-flow: row wrap;
+    margin-left: 1rem;
+    background-color: #000000;
+    opacity: 80%;
 }
 
 .cel{
     width: 4.6rem;
     height: 4.6rem;
-    background-color: bisque;
+    background-color: #a4afac;
     text-align: center;
     padding-top: 0.62rem;
-    margin-bottom: 0.4rem;
-    border-radius: 0.25rem;
+    border-radius: 0.1rem;
+    border-left: 8px solid rgb(231, 24, 66);
+    border-bottom: 8px solid rgb(231, 24, 66);
+}
+
+#cel0{
+    border-left: none;
+}
+
+#cel3{
+    border-left: none;
+}
+
+#cel6{
+    border-left: none;
+    border-bottom: none;
+}
+
+#cel7{
+    border-bottom: none;
+}
+
+#cel8{
+    border-bottom: none;
 }
