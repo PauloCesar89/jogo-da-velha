@@ -11,6 +11,8 @@ document.addEventListener('click', (e) =>{
  
 function game(id){
     var cel = document.getElementById(id);
-    turn = gameTurn = gamerX , gamerO;
-    cel.textContent = turn;
-}
+        turn = gameTurn ? gamerX : gamerO;    //operador condicional ternario: se a condição(gameTurn) for true retorna o (gamerX) se for false retorna (gamerO)
+        gameTurn = !gameTurn;                 //passa para a vez do jogador gamerO
+        cel.textContent = turn;
+
+};
