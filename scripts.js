@@ -41,7 +41,7 @@ function gameTied(){
     let O = 0;
 
     for(index in cel){
-        if(!isNaN(index)){
+        if(!isNaN(index)){                              /*verifica se o elemento é um numero*/
             if(cel[index].classList.contains(gamerX)){
                 X++
                }
@@ -51,17 +51,26 @@ function gameTied(){
         }
 
     }
-    return X + O === 9 ? true : false;
+    return X + O === 9 ? true : false;   //operador condicional ternario: define se todas as celulas foram preenchidas
 }
 
 function endGame(gamerWinner = null){
+    const popUp = document.getElementById('popUp');
+    const container = document.querySelector('.container');
+    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
+    let msg = null;
+
+    popUp.style.display = "block";
+    container.style.display = "none";
+
+
     if(gamerWinner){
-        console.log("Temos um Vencedor: Jogador " + gamerWinner);
+        popUp.appendChild(h2);
+        h2.innerHTML = "VENCEDOR!!!";
     }
     else{
-        console.log("Deu Empate!")
+        popUp.appendChild(h3);
+        h3.innerHTML = "EMPATOU!!!";
     }
 }
-
-
-/*verifica se o elemento é um numero*/

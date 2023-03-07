@@ -16,12 +16,32 @@ body{
     background-color: #000000;
     opacity: 80%;
     margin: 5rem auto;
+    display: block;
 }
 
 h1{
     text-align: center;
     color: #f4f4f4;
     margin-bottom: 2rem;
+    text-shadow: red -2px 0, cyan 2px 0;
+}
+
+h2{
+    padding: 6rem;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-shadow: red -2px 0, cyan 2px 0;
+}
+
+h3{
+    padding: 6rem;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-shadow: red -2px 0, cyan 2px 0;
 }
 
 .grid{
@@ -64,4 +84,15 @@ h1{
 
 #cel8{
     border-bottom: none;
+}
+
+#popUp{
+    width: 100%;
+    height: 15rem;
+    margin-top: 10rem;
+    background-color: #161313;
+    color: #f4f4f4;
+    opacity: 0.95;
+    position: absolute;
+    display: none;
 }
