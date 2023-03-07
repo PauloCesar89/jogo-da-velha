@@ -16,7 +16,7 @@ body{
     background-color: #000000;
     opacity: 80%;
     margin: 5rem auto;
-    display: block;
+    transition-delay: 1s;
 }
 
 h1{
@@ -27,7 +27,7 @@ h1{
 }
 
 h2{
-    padding: 6rem;
+    padding: 5rem;
     text-align: center;
     color: #f4f4f4;
     font-size: 5rem;
@@ -36,7 +36,10 @@ h2{
 }
 
 h3{
-    padding: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
     text-align: center;
     color: #f4f4f4;
     font-size: 5rem;
@@ -65,34 +68,12 @@ h3{
     border-bottom: 8px solid #f2f2f2;
 }
 
-#cel0{
-    border-left: none;
-}
-
-#cel3{
-    border-left: none;
-}
-
-#cel6{
-    border-left: none;
-    border-bottom: none;
-}
-
-#cel7{
-    border-bottom: none;
-}
-
-#cel8{
-    border-bottom: none;
-}
-
 #popUp{
     width: 100%;
     height: 15rem;
     margin-top: 10rem;
     background-color: #161313;
     color: #f4f4f4;
-    opacity: 0.95;
     position: absolute;
     display: none;
 }

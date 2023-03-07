@@ -1,38 +1,56 @@
 const cel = document.querySelectorAll('.cel');
-var gamerX = 'X';
-var gamerO = 'O';
-let gameTurn = true;
+const gamerX = 'X';
+const gamerO = 'O';
+//let gameTurn = true;
 const victorySeq =[ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ];
 
 document.addEventListener('click', (e) =>{
     if(e.target.matches('.cel')){
-        game(e.target.id);
+        game(e.target.id, gamerX);
+        setTimeout(() => bot(), 400);
     }
 });
+
+function bot(){
+    const move = [];
+    for(index in cel){
+        if(!isNaN(index)){
+            if (
+            !cel[index].classList.contains("X") && 
+            !cel[index].classList.contains("O")
+            ){
+                move.push(index);
+            }
+        }
+
+    }
+
+    const moveRandom = Math.floor(
+        Math.random() * move.length       //gera um numero randomico detro das celulas disponiveis
+    );
+
+    game(move[moveRandom], gamerO);
+
+}
  
-function game(id){
-    var cel = document.getElementById(id);
-        turn = gameTurn ? gamerX : gamerO;    //operador condicional ternario: se a condição(gameTurn) for true retorna o (gamerX) se for false retorna (gamerO)
-        gameTurn = !gameTurn;              //passa para a vez do jogador gamerO
+function game(id,turn){
+    const cel = document.getElementById(id);
         cel.textContent = turn;
         cel.classList.add(turn);
-        checkGame(gameTurn);
+        checkGame(turn);
 };
 
-function checkGame(){
+function checkGame(turn){
     const gamerWinner = victorySeq.some((seq) =>{
         return seq.every((index) =>{
             return cel[index].classList.contains(turn);
         });
     });
     if(gamerWinner){
-        endGame(turn)
+        endGame(turn);
     }
     else if(gameTied()){
         endGame();
-    }
-    else{
-
     }
 }
 
@@ -59,15 +77,14 @@ function endGame(gamerWinner = null){
     const container = document.querySelector('.container');
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
-    let msg = null;
 
     popUp.style.display = "block";
-    container.style.display = "none";
+    
 
 
     if(gamerWinner){
         popUp.appendChild(h2);
-        h2.innerHTML = "VENCEDOR!!!";
+        h2.innerHTML = 'Vencedor!!!';
     }
     else{
         popUp.appendChild(h3);
