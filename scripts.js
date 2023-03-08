@@ -26,7 +26,7 @@ function bot(){
     }
 
     const moveRandom = Math.floor(
-        Math.random() * move.length       //gera um numero randomico detro das celulas disponiveis
+        Math.random() * move.length       //gera um numero randomico dentro das celulas disponiveis
     );
 
     game(move[moveRandom], gamerO);
@@ -84,10 +84,12 @@ function endGame(gamerWinner = null){
 
     if(gamerWinner){
         popUp.appendChild(h2);
-        h2.innerHTML = 'Vencedor!!!';
+        h2.innerHTML = `Vencedor é ${gamerWinner}`;
     }
     else{
         popUp.appendChild(h3);
         h3.innerHTML = "EMPATOU!!!";
     }
+
+    setTimeout(() => location.reload(), 3000)
 }
