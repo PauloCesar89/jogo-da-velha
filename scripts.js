@@ -79,12 +79,13 @@ function endGame(gamerWinner = null){
     const h3 = document.createElement("h3");
 
     popUp.style.display = "block";
+    container.style.display = "none";
     
 
 
     if(gamerWinner){
         popUp.appendChild(h2);
-        h2.innerHTML = `Vencedor é ${gamerWinner}`;
+        h2.innerHTML = `Vencedor é ${gamerWinner}!`;
     }
     else{
         popUp.appendChild(h3);
