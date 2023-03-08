@@ -25,3 +25,6 @@ Para fazer o deploy desse projeto rode
 
 ## Tecnologias utilizadas
 
+•	HTML
+•	CSS
+•	JavaScript
