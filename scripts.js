@@ -1,8 +1,8 @@
 const cel = document.querySelectorAll('.cel');
 const gamerX = 'X';
 const gamerO = 'O';
-//let gameTurn = true;
 const victorySeq =[ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ];
+let finishedGame = false;
 
 document.addEventListener('click', (e) =>{
     if(e.target.matches('.cel')){
@@ -28,8 +28,9 @@ function bot(){
     const moveRandom = Math.floor(
         Math.random() * move.length       //gera um numero randomico dentro das celulas disponiveis
     );
-
-    game(move[moveRandom], gamerO);
+        if(!finishedGame){
+            game(move[moveRandom], gamerO);
+}
 
 }
  
@@ -73,6 +74,7 @@ function gameTied(){
 }
 
 function endGame(gamerWinner = null){
+    finishedGame = true;
     const popUp = document.getElementById('popUp');
     const container = document.querySelector('.container');
     const h2 = document.createElement("h2");
