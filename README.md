@@ -1,6 +1,6 @@
 # Jogo da velha
 
-Jogo da velha onde vence o usuário que conseguir fazer uma sequancia de três marcações seguidas nas celulas.
+Jogo da velha onde vence o usuário que conseguir fazer uma sequencia de três marcações seguidas nas células.
 
 
 ## Funcionalidades
